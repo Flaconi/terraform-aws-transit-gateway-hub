@@ -17,7 +17,7 @@ module "tgw-hub" {
 }
 
 module "tgw-satellite" {
-  source = "github.com/flaconi/terraform-aws-transit-gateway-satellite.git?ref=v1.0.0"
+  source = "github.com/flaconi/terraform-aws-transit-gateway-satellite.git?ref=vpc-attachment-by-name"
 
   providers = {
     aws.satellite = aws.satellite
