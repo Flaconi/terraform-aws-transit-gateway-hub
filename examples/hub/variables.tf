@@ -26,3 +26,9 @@ variable "aws_account_id_satellite" {
   description = "List of AWS account numbers representing the satellites of the TGW"
   type        = list
 }
+
+variable "tags" {
+  description = "A map of tags to add to all resources"
+  type        = map(string)
+  default     = {}
+}

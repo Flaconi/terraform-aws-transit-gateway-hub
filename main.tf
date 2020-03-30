@@ -5,13 +5,13 @@ resource "aws_ec2_transit_gateway" "this" {
   default_route_table_propagation = var.default_route_table_propagation
   auto_accept_shared_attachments  = "enable"
 
-  tags = { Name = var.name }
+  tags = merge(var.tags, map("Name", var.name))
 }
 
 resource "aws_ec2_transit_gateway_route_table" "this" {
   transit_gateway_id = aws_ec2_transit_gateway.this.id
 
-  tags = { Name = var.name }
+  tags = merge(var.tags, local.tags)
 }
 
 resource "aws_ram_resource_share" "this" {
@@ -19,11 +19,7 @@ resource "aws_ram_resource_share" "this" {
 
   allow_external_principals = false
 
-  tags = {
-    Name                 = var.name
-    transit-gateway-id   = aws_ec2_transit_gateway.this.id
-    transit-gateway-name = var.name
-  }
+  tags = merge(var.tags, local.tags)
 
   depends_on = [aws_ec2_transit_gateway.this]
 }

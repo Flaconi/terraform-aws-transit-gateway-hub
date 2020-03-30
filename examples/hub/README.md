@@ -13,6 +13,7 @@ No provider.
 | description | Description of the Transit Gateway | `string` | n/a | yes |
 | name | Name to be used on all the resources as identifier | `string` | n/a | yes |
 | role\_to\_assume\_hub | IAM role name to assume in the AWS account containing the TGW hub (eg. ASSUME-ROLE-HUB) | `string` | n/a | yes |
+| tags | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
 ## Outputs
 
