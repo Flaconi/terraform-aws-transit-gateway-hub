@@ -19,6 +19,12 @@ resource "aws_ram_resource_share" "this" {
 
   allow_external_principals = false
 
+  tags = {
+    Name                 = var.name
+    transit-gateway-id   = aws_ec2_transit_gateway.this.id
+    transit-gateway-name = var.name
+  }
+
   depends_on = [aws_ec2_transit_gateway.this]
 }
 
