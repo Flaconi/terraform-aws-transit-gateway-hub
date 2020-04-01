@@ -14,4 +14,6 @@ module "tgw-hub" {
   aws_account_id_satellite = var.aws_account_id_satellite
 
   role_to_assume_hub = var.role_to_assume_hub
+
+  tags = var.tags
 }
