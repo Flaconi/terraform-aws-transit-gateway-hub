@@ -64,3 +64,5 @@ Obviously, all the [supported authentication][6] methods can also be used.
 [2]: https://github.com/Flaconi/terraform-aws-transit-gateway-satellite
 [3]: https://github.com/Flaconi/terraform-aws-transit-gateway-hub/tree/master/examples
 [4]: https://docs.aws.amazon.com/cli/latest/reference/sts/assume-role.html#examples
+[5]: https://www.terraform.io/docs/configuration/modules.html#passing-providers-explicitly
+[6]: https://www.terraform.io/docs/providers/aws/index.html#authentication
