@@ -35,10 +35,6 @@ variable "aws_account_id_hub" {
   type        = string
 }
 
-variable "aws_login_profile" {
-  description = "Name of the AWS login profile as seen under ~/.aws/config used for assuming cross-account roles"
-}
-
 variable "role_to_assume_hub" {
   description = "IAM role name to assume in the AWS account containing the TGW hub (eg. ASSUME-ROLE-HUB)"
   type        = string
