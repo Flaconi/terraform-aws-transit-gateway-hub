@@ -27,7 +27,7 @@ variable "default_route_table_propagation" {
 
 variable "aws_account_id_satellite" {
   description = "List of AWS account numbers representing the satellites of the TGW"
-  type        = list
+  type        = list(any)
 }
 
 variable "aws_account_id_hub" {
