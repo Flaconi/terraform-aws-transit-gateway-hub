@@ -14,10 +14,6 @@ variable "satellite_create" {
   type        = bool
 }
 
-variable "aws_login_profile" {
-  description = "Name of the AWS login profile as seen under ~/.aws/config used for assuming cross-account roles"
-}
-
 variable "aws_account_id_hub" {
   description = "AWS account number containing the TGW hub"
   type        = string

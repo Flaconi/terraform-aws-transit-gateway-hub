@@ -8,8 +8,6 @@ module "tgw-hub" {
   name        = var.name
   description = var.description
 
-  aws_login_profile = var.aws_login_profile
-
   aws_account_id_hub       = var.aws_account_id_hub
   aws_account_id_satellite = var.aws_account_id_satellite
 
