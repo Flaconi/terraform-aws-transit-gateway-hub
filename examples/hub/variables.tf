@@ -20,7 +20,7 @@ variable "role_to_assume_hub" {
 
 variable "aws_account_id_satellite" {
   description = "List of AWS account numbers representing the satellites of the TGW"
-  type        = list
+  type        = list(string)
 }
 
 variable "tags" {
