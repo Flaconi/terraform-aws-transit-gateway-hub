@@ -52,8 +52,10 @@ variable "hub_destination_cidr_blocks" {
   default     = []
 }
 
-variable "subnet_name_keyword_selector" {
-  description = "Keyword matching the name of the subnet(s) for which the routing will be added (i.e. private)"
-  type        = string
-  default     = "private"
+variable "attachment_subnet_filters" {
+  description = "List of maps selecting the subnet(s) where TGW will be attached"
+  type = list(object({
+    name   = string
+    values = list(string)
+  }))
 }
