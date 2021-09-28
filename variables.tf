@@ -17,26 +17,24 @@ variable "tags" {
 
 variable "default_route_table_association" {
   description = "Boolean flag for toggling the default route table association"
+  type        = string
   default     = "disable"
 }
 
 variable "default_route_table_propagation" {
   description = "Boolean flag for toggling the propagation of routes in the default route table"
+  type        = string
   default     = "disable"
 }
 
 variable "aws_account_id_satellite" {
   description = "List of AWS account numbers representing the satellites of the TGW"
-  type        = list
+  type        = list(string)
 }
 
 variable "aws_account_id_hub" {
   description = "AWS account number containing the TGW hub"
   type        = string
-}
-
-variable "aws_login_profile" {
-  description = "Name of the AWS login profile as seen under ~/.aws/config used for assuming cross-account roles"
 }
 
 variable "role_to_assume_hub" {

@@ -5,7 +5,7 @@ resource "aws_ec2_transit_gateway" "this" {
   default_route_table_propagation = var.default_route_table_propagation
   auto_accept_shared_attachments  = "enable"
 
-  tags = merge(var.tags, map("Name", var.name))
+  tags = merge(var.tags, { "Name" = var.name })
 }
 
 resource "aws_ec2_transit_gateway_route_table" "this" {

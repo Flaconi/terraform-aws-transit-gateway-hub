@@ -15,10 +15,6 @@ Check out some use cases in the [examples][3].
 
 ### Credentials
 
-The module starts from the assumption that the `aws_login_profile` allows the
-user to assume the necessary IAM roles, as required, to make the necessary
-changes (and in the case of the `satellite` module, cross-account).
-
 See [this example][4] to first make sure that the credentials you want to use
 allow for cross-account actions.
 
@@ -26,24 +22,30 @@ You can read more about how Terraform handles this [here][5].
 
 Obviously, all the [supported authentication][6] methods can also be used.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.13 |
+| aws | >= 3 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
+| aws | >= 3 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | aws\_account\_id\_hub | AWS account number containing the TGW hub | `string` | n/a | yes |
-| aws\_account\_id\_satellite | List of AWS account numbers representing the satellites of the TGW | `list` | n/a | yes |
-| aws\_login\_profile | Name of the AWS login profile as seen under ~/.aws/config used for assuming cross-account roles | `any` | n/a | yes |
-| description | Description of the Transit Gateway | `string` | n/a | yes |
+| aws\_account\_id\_satellite | List of AWS account numbers representing the satellites of the TGW | `list(string)` | n/a | yes |
 | name | Name to be used on all the resources as identifier | `string` | n/a | yes |
 | role\_to\_assume\_hub | IAM role name to assume in the AWS account containing the TGW hub (eg. ASSUME-ROLE-HUB) | `string` | n/a | yes |
 | default\_route\_table\_association | Boolean flag for toggling the default route table association | `string` | `"disable"` | no |
 | default\_route\_table\_propagation | Boolean flag for toggling the propagation of routes in the default route table | `string` | `"disable"` | no |
+| description | Description of the Transit Gateway | `string` | `null` | no |
 | tags | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
 ## Outputs

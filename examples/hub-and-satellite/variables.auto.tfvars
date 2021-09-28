@@ -3,8 +3,6 @@ description = "test-tgw"
 
 satellite_create = true
 
-aws_login_profile = "login"
-
 role_to_assume_hub       = "ASSUME-ENG-CI"
 role_to_assume_satellite = "ASSUME-ENG-CI"
 
