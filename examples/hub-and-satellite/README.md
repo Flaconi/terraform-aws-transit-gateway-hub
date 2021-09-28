@@ -1,4 +1,8 @@
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
 ## Providers
 
 No provider.
@@ -6,7 +10,7 @@ No provider.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | aws\_account\_id\_hub | AWS account number containing the TGW hub | `string` | n/a | yes |
 | aws\_account\_id\_satellite | List of AWS account numbers representing the satellites of the TGW | `list` | n/a | yes |
 | description | Description of the Transit Gateway | `string` | n/a | yes |
