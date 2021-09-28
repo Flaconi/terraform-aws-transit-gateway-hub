@@ -168,7 +168,7 @@ _gen-main:
 		-e DELIM_START='$(DELIM_START)' \
 		-e DELIM_CLOSE='$(DELIM_CLOSE)' \
 		cytopia/terraform-docs:$(TFDOCS_VERSION) \
-		terraform-docs-replace-012 $(TFDOCS_ARGS) md README.md; then \
+		terraform-docs-replace $(TFDOCS_ARGS) md README.md; then \
 		echo "OK"; \
 	else \
 		echo "Failed"; \
@@ -187,7 +187,7 @@ _gen-examples:
 			-e DELIM_START='$(DELIM_START)' \
 			-e DELIM_CLOSE='$(DELIM_CLOSE)' \
 			cytopia/terraform-docs:$(TFDOCS_VERSION) \
-			terraform-docs-replace-012 $(TFDOCS_ARGS) md $${DOCKER_PATH}/README.md; then \
+			terraform-docs-replace $(TFDOCS_ARGS) md $${DOCKER_PATH}/README.md; then \
 			echo "OK"; \
 		else \
 			echo "Failed"; \
@@ -207,7 +207,7 @@ _gen-modules:
 			-e DELIM_START='$(DELIM_START)' \
 			-e DELIM_CLOSE='$(DELIM_CLOSE)' \
 			cytopia/terraform-docs:$(TFDOCS_VERSION) \
-			terraform-docs-replace-012 $(TFDOCS_ARGS) md $${DOCKER_PATH}/README.md; then \
+			terraform-docs-replace $(TFDOCS_ARGS) md $${DOCKER_PATH}/README.md; then \
 			echo "OK"; \
 		else \
 			echo "Failed"; \
