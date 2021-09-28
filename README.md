@@ -27,12 +27,13 @@ Obviously, all the [supported authentication][6] methods can also be used.
 | Name | Version |
 |------|---------|
 | terraform | >= 0.13 |
+| aws | >= 3 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
+| aws | >= 3 |
 
 ## Inputs
 
