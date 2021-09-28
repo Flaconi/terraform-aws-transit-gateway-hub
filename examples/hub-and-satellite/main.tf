@@ -24,6 +24,7 @@ module "tgw-satellite" {
 
   satellite_create  = var.satellite_create
 
+  aws_login_profile        = "login"
   aws_account_id_hub       = var.aws_account_id_hub
   aws_account_id_satellite = local.aws_account_id_satellite
 
