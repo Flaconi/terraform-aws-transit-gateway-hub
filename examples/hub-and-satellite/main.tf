@@ -15,14 +15,14 @@ module "tgw-hub" {
 }
 
 module "tgw-satellite" {
-  source = "github.com/flaconi/terraform-aws-transit-gateway-satellite.git?ref=v2.2.0"
+  source = "github.com/Flaconi/terraform-aws-transit-gateway-satellite.git?ref=v2.5.0"
 
   providers = {
     aws.satellite = aws.satellite
     aws.hub       = aws.hub
   }
 
-  satellite_create  = var.satellite_create
+  satellite_create = var.satellite_create
 
   aws_account_id_hub       = var.aws_account_id_hub
   aws_account_id_satellite = local.aws_account_id_satellite
