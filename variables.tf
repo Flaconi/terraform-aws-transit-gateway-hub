@@ -41,3 +41,9 @@ variable "role_to_assume_hub" {
   description = "IAM role name to assume in the AWS account containing the TGW hub (eg. ASSUME-ROLE-HUB)"
   type        = string
 }
+
+variable "allow_external_principals" {
+  description = "Allow external principals to be used for TGW resource share"
+  type        = bool
+  default     = false
+}
