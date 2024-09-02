@@ -13,5 +13,7 @@ module "tgw-hub" {
 
   role_to_assume_hub = var.role_to_assume_hub
 
+  allow_external_principals = true
+
   tags = var.tags
 }
