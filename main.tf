@@ -17,7 +17,7 @@ resource "aws_ec2_transit_gateway_route_table" "this" {
 resource "aws_ram_resource_share" "this" {
   name = var.name
 
-  allow_external_principals = false
+  allow_external_principals = var.allow_external_principals
 
   tags = merge(var.tags, local.tags)
 
