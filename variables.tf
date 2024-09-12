@@ -15,6 +15,12 @@ variable "tags" {
   default     = {}
 }
 
+variable "auto_accept_shared_attachments" {
+  description = "Whether resource attachment requests are automatically accepted"
+  type        = string
+  default     = "enable"
+}
+
 variable "default_route_table_association" {
   description = "Whether resource attachments are automatically associated with the default association route table"
   type        = string
