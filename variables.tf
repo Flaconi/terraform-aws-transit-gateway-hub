@@ -16,13 +16,13 @@ variable "tags" {
 }
 
 variable "default_route_table_association" {
-  description = "Boolean flag for toggling the default route table association"
+  description = "Whether resource attachments are automatically associated with the default association route table"
   type        = string
   default     = "disable"
 }
 
 variable "default_route_table_propagation" {
-  description = "Boolean flag for toggling the propagation of routes in the default route table"
+  description = "Whether resource attachments automatically propagate routes to the default propagation route table"
   type        = string
   default     = "disable"
 }
@@ -34,11 +34,6 @@ variable "aws_account_id_satellite" {
 
 variable "aws_account_id_hub" {
   description = "AWS account number containing the TGW hub"
-  type        = string
-}
-
-variable "role_to_assume_hub" {
-  description = "IAM role name to assume in the AWS account containing the TGW hub (eg. ASSUME-ROLE-HUB)"
   type        = string
 }
 
