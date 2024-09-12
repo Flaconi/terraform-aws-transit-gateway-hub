@@ -9,7 +9,7 @@ module "tgw-hub" {
   description = var.description
 
   aws_account_id_hub       = var.aws_account_id_hub
-  aws_account_id_satellite = var.aws_account_id_satellite
+  aws_account_id_satellite = [var.aws_account_id_satellite]
 
   allow_external_principals = true
 }
@@ -25,10 +25,7 @@ module "tgw-satellite" {
   satellite_create = var.satellite_create
 
   aws_account_id_hub       = var.aws_account_id_hub
-  aws_account_id_satellite = local.aws_account_id_satellite
-
-  role_to_assume_hub       = var.role_to_assume_hub
-  role_to_assume_satellite = var.role_to_assume_satellite
+  aws_account_id_satellite = var.aws_account_id_satellite
 
   vpc_name_to_attach        = var.vpc_name_to_attach
   attachment_subnet_filters = var.attachment_subnet_filters
