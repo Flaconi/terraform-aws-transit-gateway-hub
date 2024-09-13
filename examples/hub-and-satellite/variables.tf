@@ -24,14 +24,13 @@ variable "role_to_assume_hub" {
   type        = string
 }
 
-variable "role_to_assume_satellite" {
-  description = "IAM role name to assume in the AWS account containing the TGW satellite (eg. ASSUME-ROLE-SATELLITE)"
+variable "aws_account_id_satellite" {
+  description = "AWS account ID representing the satellites of the TGW"
   type        = string
 }
 
-
-variable "aws_account_id_satellite" {
-  description = "AWS account ID representing the satellites of the TGW"
+variable "role_to_assume_satellite" {
+  description = "IAM role name to assume in the AWS account containing the TGW satellite (eg. ASSUME-ROLE-SATELLITE)"
   type        = string
 }
 

@@ -12,7 +12,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_tgw-hub"></a> [tgw-hub](#module\_tgw-hub) | ../../ | n/a |
-| <a name="module_tgw-satellite"></a> [tgw-satellite](#module\_tgw-satellite) | github.com/Flaconi/terraform-aws-transit-gateway-satellite.git | v2.5.0 |
+| <a name="module_tgw-satellite"></a> [tgw-satellite](#module\_tgw-satellite) | github.com/Flaconi/terraform-aws-transit-gateway-satellite.git | v2.6.0 |
 
 ## Resources
 

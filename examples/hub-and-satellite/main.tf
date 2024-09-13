@@ -15,7 +15,7 @@ module "tgw-hub" {
 }
 
 module "tgw-satellite" {
-  source = "github.com/Flaconi/terraform-aws-transit-gateway-satellite.git?ref=v2.5.0"
+  source = "github.com/Flaconi/terraform-aws-transit-gateway-satellite.git?ref=v2.6.0"
 
   providers = {
     aws.satellite = aws.satellite
@@ -36,4 +36,6 @@ module "tgw-satellite" {
   transit_gateway_route_table_id = module.tgw-hub.transit_gateway_route_table_id
   transit_gateway_id             = module.tgw-hub.transit_gateway_id
   ram_resource_association_id    = module.tgw-hub.ram_resource_association_id
+
+  depends_on = [module.tgw-hub]
 }
