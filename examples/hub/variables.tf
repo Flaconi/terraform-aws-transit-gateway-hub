@@ -23,6 +23,13 @@ variable "aws_account_id_satellite" {
   type        = string
 }
 
+# Fake inputs to unify CI tests
+variable "role_to_assume_satellite" {
+  description = "IAM role name to assume in the AWS account containing the TGW satellite (eg. ASSUME-ROLE-SATELLITE)"
+  type        = string
+  default     = null
+}
+
 variable "tags" {
   description = "A map of tags to add to all resources"
   type        = map(string)

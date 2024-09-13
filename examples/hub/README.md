@@ -26,6 +26,7 @@ No resources.
 | <a name="input_description"></a> [description](#input\_description) | Description of the Transit Gateway | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Name to be used on all the resources as identifier | `string` | n/a | yes |
 | <a name="input_role_to_assume_hub"></a> [role\_to\_assume\_hub](#input\_role\_to\_assume\_hub) | IAM role name to assume in the AWS account containing the TGW hub (eg. ASSUME-ROLE-HUB) | `string` | n/a | yes |
+| <a name="input_role_to_assume_satellite"></a> [role\_to\_assume\_satellite](#input\_role\_to\_assume\_satellite) | IAM role name to assume in the AWS account containing the TGW satellite (eg. ASSUME-ROLE-SATELLITE) | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
 ## Outputs
