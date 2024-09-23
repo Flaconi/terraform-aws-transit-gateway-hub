@@ -3,9 +3,6 @@ description = "test-tgw"
 
 satellite_create = true
 
-role_to_assume_hub       = "ASSUME-ENG-CI"
-role_to_assume_satellite = "ASSUME-ENG-CI"
-
 vpc_name_to_attach = "ci-tgw"
 
 satellite_destination_cidr_blocks = ["208.67.222.222/32", "208.67.220.220/32"]

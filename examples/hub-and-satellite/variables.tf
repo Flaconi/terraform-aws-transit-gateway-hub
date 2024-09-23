@@ -19,13 +19,13 @@ variable "aws_account_id_hub" {
   type        = string
 }
 
-variable "aws_account_id_satellite" {
-  description = "List of AWS account numbers representing the satellites of the TGW"
-  type        = list(string)
-}
-
 variable "role_to_assume_hub" {
   description = "IAM role name to assume in the AWS account containing the TGW hub (eg. ASSUME-ROLE-HUB)"
+  type        = string
+}
+
+variable "aws_account_id_satellite" {
+  description = "AWS account ID representing the satellites of the TGW"
   type        = string
 }
 

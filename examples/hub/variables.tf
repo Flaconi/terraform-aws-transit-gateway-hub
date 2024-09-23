@@ -19,8 +19,15 @@ variable "role_to_assume_hub" {
 }
 
 variable "aws_account_id_satellite" {
-  description = "List of AWS account numbers representing the satellites of the TGW"
-  type        = list(string)
+  description = "AWS account ID representing the satellites of the TGW"
+  type        = string
+}
+
+# Fake inputs to unify CI tests
+variable "role_to_assume_satellite" {
+  description = "IAM role name to assume in the AWS account containing the TGW satellite (eg. ASSUME-ROLE-SATELLITE)"
+  type        = string
+  default     = null
 }
 
 variable "tags" {

@@ -9,13 +9,13 @@ module "tgw-hub" {
   description = var.description
 
   aws_account_id_hub       = var.aws_account_id_hub
-  aws_account_id_satellite = var.aws_account_id_satellite
+  aws_account_id_satellite = [var.aws_account_id_satellite]
 
   allow_external_principals = true
 }
 
 module "tgw-satellite" {
-  source = "github.com/Flaconi/terraform-aws-transit-gateway-satellite.git?ref=v2.5.0"
+  source = "github.com/Flaconi/terraform-aws-transit-gateway-satellite.git?ref=v2.6.0"
 
   providers = {
     aws.satellite = aws.satellite
@@ -25,10 +25,7 @@ module "tgw-satellite" {
   satellite_create = var.satellite_create
 
   aws_account_id_hub       = var.aws_account_id_hub
-  aws_account_id_satellite = local.aws_account_id_satellite
-
-  role_to_assume_hub       = var.role_to_assume_hub
-  role_to_assume_satellite = var.role_to_assume_satellite
+  aws_account_id_satellite = var.aws_account_id_satellite
 
   vpc_name_to_attach        = var.vpc_name_to_attach
   attachment_subnet_filters = var.attachment_subnet_filters
@@ -39,4 +36,6 @@ module "tgw-satellite" {
   transit_gateway_route_table_id = module.tgw-hub.transit_gateway_route_table_id
   transit_gateway_id             = module.tgw-hub.transit_gateway_id
   ram_resource_association_id    = module.tgw-hub.ram_resource_association_id
+
+  depends_on = [module.tgw-hub]
 }
